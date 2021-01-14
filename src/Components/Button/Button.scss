@@ -1,0 +1,14 @@
+@import '../../sass/var.scss';
+@import '../../sass/mixins.scss';
+$colors: ('primary': $primary, 'secondary': $secondary, 'additional': $additional, 'disabled': $disabled);
+
+.btn{
+    color: $light_text;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 17px 40px;
+    border-radius: 10px;
+    border: none;
+
+    @include bgc_for_list($colors);
+}

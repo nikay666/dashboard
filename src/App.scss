@@ -1,0 +1,25 @@
+@import './sass/var.scss';
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 270px auto 380px;
+}
+
+.h1{
+  font-family: $Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 34px;
+
+  color: $dark_text;
+}
+
+.content{
+  background-color: $bg;
+}
+.column{
+  box-shadow: 0px 0px 3px 0px rgba($dark_text, 0.3);
+}

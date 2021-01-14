@@ -1,0 +1,7 @@
+@mixin bgc_for_list($colors) {
+    @each $name, $color in $colors {
+        &--#{$name} {
+          background-color: $color;
+        }
+    }
+}
