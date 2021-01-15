@@ -19,7 +19,9 @@
 
 .content{
   background-color: $bg;
+  padding: $topIndent 0;
 }
-.column{
-  box-shadow: 0px 0px 3px 0px rgba($dark_text, 0.3);
+.aside{
+  box-shadow: 0px 0px 3px 0px rgba($dark_text, 0.1);
+  padding: $topIndent 0;
 }

@@ -2,8 +2,7 @@ import React from 'react'
 import classNames from 'classnames'
 import MenuItem from './MenuItem'
 import './Menu.scss'
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faCog, faColumns, faCommentAlt, faFolder, faThLarge, faUser } from '@fortawesome/free-solid-svg-icons'
+
 
 
 const menuList = [
@@ -14,7 +13,7 @@ const menuList = [
     {link: '/chats', text: 'Chats', icon: 'comment-alt'},
     {link: '/settings', text: 'Settings', icon: 'cog'}
 ]
-library.add(faColumns, faThLarge, faFolder, faUser, faCommentAlt, faCog)
+
 
 const Menu = () => {
 

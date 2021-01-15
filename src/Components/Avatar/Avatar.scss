@@ -1,0 +1,40 @@
+@import '../../sass/var.scss';
+@import '../../sass/mixins.scss';
+.avatar{
+    $opacity: 0.2;
+    $colors: 
+        (
+            'primary': $primary, 
+            'secondary': $secondary,
+            'additional': $additional,
+        );
+    $mediumSize: 48px;
+    @include generating_avarar_styles($colors, $opacity);
+
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__icon{
+       font-size: $mediumSize / 2.5;
+    }
+
+    &--square{
+        border-radius: 5px;
+    }
+    &--circle{
+        border-radius: 50%;
+    }
+
+    &--medium{
+        width: $mediumSize;
+        height: $mediumSize;
+    }
+    
+
+    &__img{
+        width: 100%;
+        height: 100%;
+    }
+}

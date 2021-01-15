@@ -3,13 +3,14 @@ import PropTypes from 'prop-types'
 import './UserMenu.scss'
 import { Button } from '../../Components/Button'
 import { Menu } from '../../Components/Menu'
+import { Logo } from '../../Components/Logo'
 
 
 const UserMenu = props => {
     return (
-        <aside className='user-menu column'>
+        <aside className='user-menu aside'>
             <div className="user-menu__logo">
-
+                <Logo/>
             </div>
             <Button value='Join a course' color='primary' />
             <nav className="user-menu__navigation">

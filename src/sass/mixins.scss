@@ -5,3 +5,16 @@
         }
     }
 }
+
+@mixin generating_avarar_styles($colors, $opacity){
+  @each $name, $color in $colors {
+    $this: &;
+    &--#{$name} {
+      background-color: rgba($color, $opacity);
+
+      #{$this}__icon{
+        color: $color;
+      }
+    }
+  }
+}
