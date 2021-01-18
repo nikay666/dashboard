@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 const Chats = props => {
     return (
@@ -9,8 +8,6 @@ const Chats = props => {
     )
 }
 
-Chats.propTypes = {
 
-}
 
 export default Chats

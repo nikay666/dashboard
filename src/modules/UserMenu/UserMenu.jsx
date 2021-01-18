@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import './UserMenu.scss'
 import { Button } from '../../Components/Button'
 import { Menu } from '../../Components/Menu'
@@ -24,8 +23,5 @@ const UserMenu = props => {
     )
 }
 
-UserMenu.propTypes = {
-
-}
 
 export default UserMenu

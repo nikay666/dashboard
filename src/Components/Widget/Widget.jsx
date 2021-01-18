@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { InfoBlock } from '../InfoBlock'
-import ProgressBar from '../ProgressBar/ProgressBar'
 import  './Widget.scss'
 
 const Widget = ({title, data}) => {
@@ -28,7 +27,8 @@ const Widget = ({title, data}) => {
 }
 
 Widget.propTypes = {
-
+    title: PropTypes.string,
+    data: PropTypes.arrayOf(PropTypes.object)
 }
 
 export default Widget

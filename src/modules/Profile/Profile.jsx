@@ -1,9 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import './Profile.scss'
-import { InfoBlock } from '../../../Components/InfoBlock'
-import ProgressBar from '../../../Components/ProgressBar/ProgressBar'
-import { Widget } from '../../../Components/Widget'
+import { InfoBlock } from '../../Components/InfoBlock'
+import { Widget } from '../../Components/Widget'
 
 const Profile = ({user}) => {
     return (
@@ -24,7 +23,7 @@ const Profile = ({user}) => {
 }
 
 Profile.propTypess = {
-
+    user: PropTypes.object
 }
 
 export default Profile

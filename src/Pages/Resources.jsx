@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 const Resources = props => {
     return (
@@ -9,8 +8,6 @@ const Resources = props => {
     )
 }
 
-Resources.propTypes = {
 
-}
 
 export default Resources

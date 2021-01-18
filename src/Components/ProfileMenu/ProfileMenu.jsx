@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react'
-import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import './ProfileMenu.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -28,26 +27,22 @@ const ProfileMenu = () => {
         <div className='profile-menu' ref={menuRef} >
             <button  
                 className='profile-menu__link'
-                onClick={(e) => handlerShow(e)} 
+                onClick={handlerShow} 
             >
                 <FontAwesomeIcon icon='chevron-down'/>  
             </button>
             <div className={classNames("profile-menu__list", {'show': show})}>
-                <Link className='profile-menu__item' to='/settings'>
+                <Link className='profile-menu__item' to='/settings'  onClick={handlerShow}>
                     <FontAwesomeIcon className='profile-menu__icon' icon='cog'/>
                     Settings
                 </Link>
-                <Link className='profile-menu__item profile-menu__item--exit' to='/'>
+                <Link className='profile-menu__item profile-menu__item--exit' to='/'  onClick={handlerShow}>
                     <FontAwesomeIcon className='profile-menu__icon' icon='sign-out-alt'/>
                     Exit
                 </Link>
             </div>
         </div>
     )
-}
-
-ProfileMenu.propTypes = {
-
 }
 
 export default ProfileMenu

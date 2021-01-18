@@ -12,7 +12,8 @@ const Button = ({value, color}) => {
 }
 
 Button.propTypes = {
-
+    value: PropTypes.string,
+    color: PropTypes.string,
 }
 
 export default Button

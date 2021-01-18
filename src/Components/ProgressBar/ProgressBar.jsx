@@ -12,7 +12,9 @@ const ProgressBar = ({value, max=100, color='primary',}) => {
 }
 
 ProgressBar.propTypes = {
-
+    value: PropTypes.number,
+    max: PropTypes.number,
+    color: PropTypes.string
 }
 
 export default ProgressBar

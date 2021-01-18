@@ -11,7 +11,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faCamera, faChevronDown, faCog, faColumns, faCommentAlt, faCube, faFolder, faPalette, faPen, faSignOutAlt, faSmile, faThLarge, faUser } from '@fortawesome/free-solid-svg-icons'
 
 import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom'
-import { Profile } from './modules/UserMenu/Profile';
+import { Profile } from './modules/Profile';
 import {user} from './utilits'
 
 

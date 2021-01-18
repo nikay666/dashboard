@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 const Friends = props => {
     return (
@@ -9,8 +8,6 @@ const Friends = props => {
     )
 }
 
-Friends.propTypes = {
 
-}
 
 export default Friends

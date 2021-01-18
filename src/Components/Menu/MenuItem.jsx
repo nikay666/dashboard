@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link, useRouteMatch } from 'react-router-dom'
@@ -8,7 +8,6 @@ const MenuItem = ({link, text, icon, onClick }) => {
     const match = useRouteMatch({
         path: link
     })
-    console.log(match);
     return (
         <li className={classNames('menu__item', {'active': match})} onClick={onClick}>
                 <Link to={link} className="menu__link text text--icon">
@@ -22,7 +21,10 @@ const MenuItem = ({link, text, icon, onClick }) => {
 }
 
 MenuItem.propTypes = {
-
+    link:  PropTypes.string,
+    text:  PropTypes.string,
+    icon:  PropTypes.string,
+    onClick: PropTypes.func
 }
 
 export default MenuItem
