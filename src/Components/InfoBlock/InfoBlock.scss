@@ -1,3 +1,43 @@
+@import '../../sass/var.scss';
+
 .info-block{
+    display: flex;
+    gap: 20px;
+    padding: 14px 0;
+
+    $this: &;
     
+    &__img{
+
+    }
+    &__content{
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        &--only-title{
+            justify-content: center;
+            #{$this}__title{
+                font-size: 20px;
+            }
+        }
+    }
+    &__title{
+        font-size: 16px;
+        color: $dark_text;
+        font-weight: 500;
+
+    }
+    &__subtitle{
+        color: $hint_text;
+        font-size: 14px;
+        font-weight: 300;
+    }
+    &__utility{
+        display: flex;
+        align-items: center;
+        max-width: 30%;
+        margin-left: auto;
+    }
 }

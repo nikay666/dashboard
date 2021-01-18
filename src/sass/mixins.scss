@@ -18,3 +18,21 @@
     }
   }
 }
+
+@mixin opacity_bg_with_element($colors, $opacity, $selector_bg, $selector_child, $property){
+  @each $name, $color in $colors {
+    $this: &;
+
+    &--#{$name}{
+      
+      &#{$this}#{$selector_bg}{
+        background-color: rgba($color, $opacity);
+      }
+    
+      &#{$this}#{$selector_child}{
+        #{$property}: $color;
+      }
+    }
+  }
+}
+

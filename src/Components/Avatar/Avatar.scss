@@ -1,13 +1,7 @@
 @import '../../sass/var.scss';
 @import '../../sass/mixins.scss';
 .avatar{
-    $opacity: 0.2;
-    $colors: 
-        (
-            'primary': $primary, 
-            'secondary': $secondary,
-            'additional': $additional,
-        );
+
     $mediumSize: 48px;
     @include generating_avarar_styles($colors, $opacity);
 

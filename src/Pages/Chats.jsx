@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const Chats = props => {
     return (
-        <div>
+        <div className='content'>
             <h1 className="h1">Chats</h1>
         </div>
     )

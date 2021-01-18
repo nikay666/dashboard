@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const Settings = props => {
     return (
-        <div>
+        <div className='content'>
             <h1 className="h1">Settings</h1>
         </div>
     )

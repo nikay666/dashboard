@@ -1,0 +1,29 @@
+@import '../../sass/var.scss';
+@import '../../sass/mixins.scss';
+.progress-bar{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+         appearance: none;
+         border: none;
+    width: 100px;
+    
+
+    &::-webkit-progress-bar{
+        height: 8px;
+        border-radius: 20px; 
+    }
+    &[value]::-webkit-progress-value {
+        border-radius: 20px; 
+    }
+
+    $bar: "::-webkit-progress-bar";
+    $value: "[value]::-webkit-progress-value";
+
+    @include opacity_bg_with_element(
+        $colors,
+        $opacity,
+        $bar, 
+        $value,
+        'background-color'
+    )
+}

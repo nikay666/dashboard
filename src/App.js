@@ -8,18 +8,15 @@ import Friends from './Pages/Friends';
 import Settings from './Pages/Settings';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faCog, faColumns, faCommentAlt, faFolder, faPen, faSmile, faThLarge, faUser } from '@fortawesome/free-solid-svg-icons'
+import { faCamera, faChevronDown, faCog, faColumns, faCommentAlt, faCube, faFolder, faPalette, faPen, faSignOutAlt, faSmile, faThLarge, faUser } from '@fortawesome/free-solid-svg-icons'
 
 import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom'
 import { Profile } from './modules/UserMenu/Profile';
+import {user} from './utilits'
 
-const user={
-  avatar: 'https://sun9-8.userapi.com/impg/aEsU4dOWknLGQ2VAEKlbYShAlx94gkJxK9YVnA/dJ7ZGpBcceg.jpg?size=1200x1200&quality=96&proxy=1&sign=9e737989500984f0595642511c323e93&type=album',
-  name: 'Nika Yakubova',
-  link: 'https://github.com/nikay666'
-}
 
-library.add(faColumns, faThLarge, faFolder, faUser, faCommentAlt, faCog, faPen, faSmile)
+
+library.add(faColumns, faThLarge, faFolder, faUser, faCommentAlt, faCog, faPen, faSmile, faCamera, faPalette, faCube, faChevronDown, faSignOutAlt)
 
 function App() {
   return (
