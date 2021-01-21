@@ -4,18 +4,7 @@ import MenuItem from './MenuItem'
 import './Menu.scss'
 
 
-
-const menuList = [
-    {link: '/dashboard', text: 'Dashboard', icon: "columns"},
-    {link: '/all', text: 'All courses',icon: "th-large" },
-    {link: '/resources', text: 'Resources', icon: 'folder'},
-    {link: '/friends', text: 'Friends', icon: 'user'},
-    {link: '/chats', text: 'Chats', icon: 'comment-alt'},
-    {link: '/settings', text: 'Settings', icon: 'cog'}
-]
-
-
-const Menu = () => {
+const Menu = ({menuList}) => {
 
     return (
         <ul className={classNames('menu')}>

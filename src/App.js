@@ -32,19 +32,38 @@ const listNotification = [
   }
 ]
 
+const tabs = [
+  { title: 'Ongoing'},
+  { title: 'Favorite'},
+  { title: 'Complete' },
+]
+
+
+const menuList = [
+  {link: '/dashboard#Ongoing', text: 'Dashboard', icon: "columns"},
+  {link: '/all', text: 'All courses',icon: "th-large" },
+  {link: '/resources', text: 'Resources', icon: 'folder'},
+  {link: '/friends', text: 'Friends', icon: 'user'},
+  {link: '/chats', text: 'Chats', icon: 'comment-alt'},
+  {link: '/settings', text: 'Settings', icon: 'cog'}
+]
+
+
+
+
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <UserMenu/>
+        <UserMenu menuList={menuList} />
         <Route exact path="/">
-           <Redirect to="/dashboard" /> 
+           <Redirect to="/dashboard#Ongoing" /> 
         </Route>
         <main className='main'>
           <TopPanel list={listNotification}/>
           <Switch>
-            <Route exact path='/dashboard' component={Dashboard} />
+            <Route exact path={`/dashboard`} render={(props) => <Dashboard tabs={tabs}/>} />
             <Route exact path='/all' component={AllCouses} />
             <Route exact path='/resources' component={Resources} />
             <Route exact path='/friends' component={Friends} />

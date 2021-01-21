@@ -1,9 +1,14 @@
 import React from 'react'
+import { Tabs } from '../Components/Tabs'
 
-const Dashboard = props => {
+
+const Dashboard = ({tabs}) => {
     return (
         <div className="dashboard content">
-            <h1 className='h1'>Dashboard</h1>
+            <div className="content__header">
+                <h1 className='h1'>Dashboard</h1>
+                <Tabs tabs={tabs}/>
+            </div>
         </div>
     )
 }

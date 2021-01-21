@@ -4,9 +4,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link, useRouteMatch } from 'react-router-dom'
 import classNames from 'classnames'
 
+const withoutHash = (link) => {
+    const res =link.split("#")[0]
+    return res
+}
+
 const MenuItem = ({link, text, icon, onClick }) => {
     const match = useRouteMatch({
-        path: link
+        path: withoutHash(link)
     })
     return (
         <li className={classNames('menu__item', {'active': match})} onClick={onClick}>

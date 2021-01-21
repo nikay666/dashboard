@@ -5,7 +5,7 @@ import { Menu } from '../../Components/Menu'
 import { Logo } from '../../Components/Logo'
 
 
-const UserMenu = props => {
+const UserMenu = ({menuList}) => {
     return (
         <aside className='user-menu aside'>
             <div className="user-menu__logo">
@@ -13,7 +13,7 @@ const UserMenu = props => {
             </div>
             <Button value='Join a course' color='primary' />
             <nav className="user-menu__navigation">
-                <Menu/>
+                <Menu menuList={menuList}/>
             </nav>
             <div className="user-menu__upgrade">
                 <Button value='Upgrade' color='primary' />
