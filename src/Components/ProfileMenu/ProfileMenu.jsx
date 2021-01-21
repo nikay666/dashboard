@@ -1,30 +1,15 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import './ProfileMenu.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import classNames from 'classnames'
+import { useHandlerPopup } from '../../CustomHooks/CustomHooks'
 
 const ProfileMenu = () => {
-    const [show, setShow] = useState(false)
-    const menuRef = useRef()
-    
-
-    const handlerShow = (e) => {
-        setShow(!show)
-    }
-    const handleroutsideClick = (e) => {
-        const path = e.path || (e.composedPath && e.composedPath());
-        if(!path.includes(menuRef.current)){
-            setShow(false)
-        }
-    }
-    useEffect(() => {
-        document.body.addEventListener('click', handleroutsideClick)
-    }, [])
-
+    const [ref, show, handlerShow] = useHandlerPopup()
     
     return (
-        <div className='profile-menu' ref={menuRef} >
+        <div className='profile-menu' ref={ref} >
             <button  
                 className='profile-menu__link'
                 onClick={handlerShow} 

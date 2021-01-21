@@ -6,9 +6,9 @@ import { Avatar } from '../Avatar'
 import ProgressBar from '../ProgressBar/ProgressBar'
 import { ProfileMenu } from '../ProfileMenu'
 
-const InfoBlock = ({ title, subtitle, img, icon, color, link, utility, profile}) => {
+const InfoBlock = ({ title, className='', subtitle, img, icon, color, link, utility, profile}) => {
     return (
-        <div className='info-block'>
+        <div className={classNames('info-block', className)}>
             <Avatar className="info-block__img" color={color} icon={icon} type='square' img={img} alt={title} />
             <div className={classNames("info-block__content", {'info-block__content--only-title': !subtitle})}>
                 <p className={classNames("info-block__title")}>{title}</p>
