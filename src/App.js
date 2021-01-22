@@ -40,7 +40,7 @@ const tabs = [
 
 
 const menuList = [
-  {link: '/dashboard#Ongoing', text: 'Dashboard', icon: "columns"},
+  {link: `/dashboard`, text: 'Dashboard', icon: "columns"},
   {link: '/all', text: 'All courses',icon: "th-large" },
   {link: '/resources', text: 'Resources', icon: 'folder'},
   {link: '/friends', text: 'Friends', icon: 'user'},
@@ -57,8 +57,8 @@ function App() {
     <Router>
       <div className="App">
         <UserMenu menuList={menuList} />
-        <Route exact path="/">
-           <Redirect to="/dashboard#Ongoing" /> 
+        <Route exact path={['/', '/dashboard']}>
+           <Redirect to={`/dashboard`} /> 
         </Route>
         <main className='main'>
           <TopPanel list={listNotification}/>

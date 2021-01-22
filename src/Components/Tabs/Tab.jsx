@@ -1,30 +1,30 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
 import classNames from 'classnames'
-import { useMatchHash } from '../../CustomHooks/CustomHooks'
 
-const Tab = ({title, onClick}) => {
-    const match = useMatchHash({
-        hash: `#${title}` 
-    })
+const Tab = ({title, id, active, onClickTab}) => {
+
     const handlerClick = (e) => {
-        onClick(e.target)
+        onClickTab(e.target, parseInt(e.target.id, 10))
     }
 
+
     return (
-        <Link 
-            className={classNames("tab", {'active': match})}
-            to={{hash:`${title}`}}
+        <button 
+            className={classNames("tab", {'active': active})}
+            id={id}
             onClick={handlerClick}
-        >{title}</Link>
-        
+    
+        >{title}</button> 
     )
 }
 
 Tab.propTypes = {
     title: PropTypes.string,
-    onClick: PropTypes.func
+    id: PropTypes.number,
+    active: PropTypes.bool,
+    onClickTab: PropTypes.func,
+
 }
 
 export default Tab

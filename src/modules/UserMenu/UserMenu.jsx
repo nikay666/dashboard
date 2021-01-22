@@ -7,7 +7,7 @@ import { Logo } from '../../Components/Logo'
 
 const UserMenu = ({menuList}) => {
     return (
-        <aside className='user-menu aside'>
+        <header className='user-menu aside'>
             <div className="user-menu__logo">
                 <Logo/>
             </div>
@@ -19,7 +19,7 @@ const UserMenu = ({menuList}) => {
                 <Button value='Upgrade' color='primary' />
             </div>
 
-        </aside>
+        </header>
     )
 }
 
