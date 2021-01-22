@@ -8,14 +8,14 @@ import Friends from './Pages/Friends';
 import Settings from './Pages/Settings';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faBell, faCamera, faChevronDown, faCog, faColumns, faCommentAlt, faCube, faFolder, faPalette, faPen, faSearch, faSignOutAlt, faSmile, faSnowflake, faThLarge, faTimes, faUser } from '@fortawesome/free-solid-svg-icons'
+import { faBell, faCamera, faChevronDown, faCog, faColumns, faCommentAlt, faCube, faFolder, faPalette, faPen, faPlay, faSearch, faSignOutAlt, faSmile, faSnowflake, faThLarge, faTimes, faUser } from '@fortawesome/free-solid-svg-icons'
 
 import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom'
 import { Profile } from './modules/Profile';
 import {user} from './utilits'
 import { TopPanel } from './modules/TopPanel';
 
-library.add(faColumns, faThLarge, faFolder, faUser, faCommentAlt, faCog, faPen, faSmile, faCamera, faPalette, faCube, faChevronDown, faSignOutAlt, faSearch, faTimes, faBell, faSnowflake)
+library.add(faColumns, faThLarge, faFolder, faUser, faCommentAlt, faCog, faPen, faSmile, faCamera, faPalette, faCube, faChevronDown, faSignOutAlt, faSearch, faTimes, faBell, faSnowflake, faPlay)
 
 const listNotification = [
   {

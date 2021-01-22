@@ -4,9 +4,9 @@ import classNames from 'classnames'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './Avatar.scss'
 
-const Avatar = ({type='square', img, icon='smile', color='primary', alt, size='medium'}) => {
+const Avatar = ({type='square', img, icon='smile', color='primary', alt, size='medium', border=false}) => {
     return (
-        <div className={classNames('avatar', `avatar--${type}`, `avatar--${size}`, `avatar--${color}`)} >
+        <div className={classNames('avatar', `avatar--${type}`, `avatar--${size}`, `avatar--${color}`, {[`avatar--border`]: border})} >
             {
                 img 
                 ? <img className='avatar__img' src={img} alt={alt} />
@@ -24,7 +24,8 @@ Avatar.propTypes = {
     icon: PropTypes.string, 
     color: PropTypes.string, 
     alt: PropTypes.string, 
-    size: PropTypes.string
+    size: PropTypes.string,
+    border: PropTypes.bool
 }
 
 export default Avatar

@@ -1,13 +1,16 @@
 .tab-panel{
     opacity: 0;
     visibility: hidden;
-    position: absolute;
-    transition: 0.3s ease-in-out;
     margin-top: 20px;
+    position: absolute;
 
-    &.active{
-        opacity: 1;
-        visibility: visible;
+    &.active{   
+        margin-top: 40px;
         position: relative;
+        opacity: 1;
+        width: 100%;
+        visibility: visible;
+
+
     }
 }

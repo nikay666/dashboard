@@ -2,9 +2,10 @@
 
 .App {
   text-align: center;
-  min-height: 100vh;
+  height: 100vh;
   display: grid;
   grid-template-columns: 270px auto 380px;
+
 }
 
 .h1{
@@ -37,8 +38,29 @@
 .main{
   padding: $topIndent 40px;
   background-color: $bg;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
 }
 .aside{
   box-shadow: $shadow;
   padding: $topIndent 0;
+}
+.course-list{
+  display: flex;
+  flex-wrap: wrap;
+  gap: $courseGap;
+  justify-content: space-between;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
