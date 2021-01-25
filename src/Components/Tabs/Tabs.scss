@@ -22,17 +22,9 @@
 .tab{
     border: none;
     position: relative;
-    background-color: transparent;
     color: $hint_text;
-    font-size: 1rem;
-    transition: color 0.3s ease-in-out;
-    padding: 7px 20px;
-    cursor: pointer;
-    font-weight: 500;
-    text-decoration: none;
-    outline: none;
 
-    &.active{
+    &.active {
         color: $primary;
     }
 }

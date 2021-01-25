@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
+import { Button } from '../Button'
 
 const Tab = ({title, id, active, onClickTab}) => {
 
@@ -10,12 +11,12 @@ const Tab = ({title, id, active, onClickTab}) => {
 
 
     return (
-        <button 
-            className={classNames("tab", {'active': active})}
+        <button
+            className={classNames("tab", {'active': active}, 'btn btn--text')}
             id={id}
             onClick={handlerClick}
     
-        >{title}</button> 
+        >{title}</button>
     )
 }
 

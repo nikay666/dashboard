@@ -63,7 +63,7 @@ function App() {
         <main className='main'>
           <TopPanel list={listNotification}/>
           <Switch>
-            <Route exact path={`/dashboard`} render={(props) => <Dashboard tabs={tabs}/>} />
+            <Route exact path='/dashboard' render={(props) => <Dashboard tabs={tabs}/>} />
             <Route exact path='/all' component={AllCouses} />
             <Route exact path='/resources' component={Resources} />
             <Route exact path='/friends' component={Friends} />

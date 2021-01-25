@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
 import './TabPanel.scss'
-import { Card } from '../Card'
+import { CardCover } from '../CardCover'
 
 const TabPanel = ({courseList, title, active}) => {
     // console.log(courseList)
@@ -12,8 +12,8 @@ const TabPanel = ({courseList, title, active}) => {
             {
                 courseList.map((course, index) => (
                 
-                    <Card 
-                        classes='card--course'
+                    <CardCover 
+                        classes='course'
                         key={index}
                         title={course.title}
                         lessonNumber={course.lessonNumber} 

@@ -11,12 +11,12 @@ const UserMenu = ({menuList}) => {
             <div className="user-menu__logo">
                 <Logo/>
             </div>
-            <Button value='Join a course' color='primary' />
+            <Button value='Join a course' color='primary'  type='contained' />
             <nav className="user-menu__navigation">
                 <Menu menuList={menuList}/>
             </nav>
             <div className="user-menu__upgrade">
-                <Button value='Upgrade' color='primary' />
+                <Button value='Upgrade' color='primary' type='contained' />
             </div>
 
         </header>
